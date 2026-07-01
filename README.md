@@ -76,6 +76,14 @@ Un double-clic permet d’ouvrir ou de replier progressivement les branches de l
 ### Export documentaire
 ![Export PDF A3 de la cartographie](docs/images/atlas-si-export-pdf.png)
 
+## Soutenir le projet
+
+Atlas SI est développé et maintenu sur du temps personnel. Si le projet vous est utile, vous pouvez soutenir son développement, sa documentation et son infrastructure par une contribution volontaire :
+
+**[Soutenir Atlas SI avec PayPal](https://www.paypal.me/oliviertocanier)**
+
+Les contributions sont facultatives, sans contrepartie contractuelle et n’ouvrent pas droit à un avantage fiscal.
+
 ## Architecture technique
 
 - **Base de données :** PostgreSQL ;
@@ -183,14 +191,6 @@ Les propositions et contributions sont les bienvenues dans les tickets GitHub.
 Les corrections, améliorations, traductions, modèles et contributions documentaires sont les bienvenus.
 
 Avant de proposer une modification, consultez [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
-## Soutenir le projet
-
-Atlas SI est développé et maintenu sur du temps personnel. Si le projet vous est utile, vous pouvez soutenir son développement, sa documentation et son infrastructure par une contribution volontaire :
-
-**[Soutenir Atlas SI avec PayPal](https://www.paypal.me/oliviertocanier)**
-
-Les contributions sont facultatives, sans contrepartie contractuelle et n’ouvrent pas droit à un avantage fiscal.
 
 ## Indépendance vis-à-vis de l’ANSSI
 
