@@ -62,6 +62,20 @@ Un double-clic permet d’ouvrir ou de replier progressivement les branches de l
 - docs/images/atlas-si-export-pdf.png
 -->
 
+## Fonctionnalités clés
+
+### Cartographie interactive
+![Vue générale de la cartographie Atlas SI](docs/images/atlas-si-cartographie.png)
+
+### Constructeur de cartes enregistrées
+![Constructeur de cartes Atlas SI](docs/images/atlas-si-constructeur-cartes.png)
+
+### Exploration imbriquée et regroupement par étiquette
+![Exploration imbriquée et regroupement réseau](docs/images/atlas-si-regroupement-network.png)
+
+### Export documentaire
+![Export PDF A3 de la cartographie](docs/images/atlas-si-export-pdf.png)
+
 ## Architecture technique
 
 - **Base de données :** PostgreSQL ;
