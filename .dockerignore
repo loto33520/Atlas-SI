@@ -1,0 +1,9 @@
+.git
+.env
+certs
+backups
+backend
+frontend/node_modules
+frontend/dist
+*.tar.gz
+*.zip

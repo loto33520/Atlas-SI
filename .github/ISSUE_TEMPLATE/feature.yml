@@ -1,0 +1,22 @@
+name: Proposer une évolution
+description: Suggérer une nouvelle fonction ou une amélioration
+title: "[Évolution] "
+labels: ["évolution"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Besoin ou problème rencontré
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Évolution proposée
+    validations:
+      required: true
+  - type: textarea
+    id: users
+    attributes:
+      label: Utilisateurs concernés
+      placeholder: DSI, RSSI, administrateur, contributeur, lecteur...

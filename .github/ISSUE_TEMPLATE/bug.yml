@@ -1,0 +1,54 @@
+name: Signaler une anomalie
+description: Signaler un comportement incorrect ou une régression
+title: "[Anomalie] "
+labels: ["anomalie"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de ne joindre aucune donnée réelle ou confidentielle de votre système d'information.
+  - type: input
+    id: version
+    attributes:
+      label: Version d'Atlas SI
+      placeholder: 2.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Mode d'installation
+      options:
+        - Docker Compose avec authentification locale
+        - Docker Compose avec Keycloak / OpenID Connect
+        - Développement local
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description de l'anomalie
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes de reproduction
+      placeholder: |
+        1. Ouvrir...
+        2. Cliquer sur...
+        3. Constater...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Journaux ou captures anonymisés
+      description: Supprimez les secrets, noms internes, adresses et données réelles.

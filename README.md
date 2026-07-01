@@ -83,7 +83,7 @@ Un double-clic permet d’ouvrir ou de replier progressivement les branches de l
 sudo mkdir -p /opt/atlas-si
 sudo chown "$USER":"$USER" /opt/atlas-si
 
-git clone https://github.com/VOTRE_COMPTE/Atlas-SI.git /opt/atlas-si
+git clone https://github.com/loto33520/Atlas-SI.git /opt/atlas-si
 cd /opt/atlas-si
 
 sudo ./scripts/prepare-install.sh local
@@ -142,10 +142,20 @@ Consultez [`docs/STOCKAGE_ET_SAUVEGARDE.md`](docs/STOCKAGE_ET_SAUVEGARDE.md) ava
 
 ## Sécurité
 
+Ne publiez jamais :
+
+- votre fichier `.env` ;
+- vos mots de passe ou secrets OpenID Connect ;
+- vos certificats et clés privées ;
+- vos sauvegardes PostgreSQL ;
+- des exports contenant des données réelles de votre système d’information.
+
 Pour signaler une vulnérabilité, consultez [`SECURITY.md`](SECURITY.md).
 
 ## Feuille de route envisagée
 
+- connecteurs GLPI, NetBox, VMware, Proxmox, Active Directory et Entra ID ;
+- synchronisation et contrôle renforcé de l’actualisation des données ;
 - tableaux de bord de gouvernance supplémentaires ;
 - amélioration continue des exports et des modèles de cartographie ;
 - enrichissement des fonctions liées à la sécurité et à la conformité.
@@ -162,7 +172,7 @@ Avant de proposer une modification, consultez [`CONTRIBUTING.md`](CONTRIBUTING.m
 
 Atlas SI est développé et maintenu sur du temps personnel. Si le projet vous est utile, vous pouvez soutenir son développement, sa documentation et son infrastructure par une contribution volontaire :
 
-**[Soutenir Atlas SI avec PayPal](paypal.me/oliviertocanier)**
+**[Soutenir Atlas SI avec PayPal](https://www.paypal.me/oliviertocanier)**
 
 Les contributions sont facultatives, sans contrepartie contractuelle et n’ouvrent pas droit à un avantage fiscal.
 
