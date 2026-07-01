@@ -1,0 +1,218 @@
+﻿relation_type_code;source_ref;source_type_code;target_ref;target_type_code;label;attributes;active
+located_in;RTR-BDX-01;network;SITE-BDX;site;Installé sur le site;;true
+located_in;FW-BDX-01;network;SITE-BDX;site;Installé sur le site;;true
+located_in;SW-BDX-CORE-01;network;SITE-BDX;site;Installé sur le site;;true
+located_in;SW-BDX-VOIP-01;network;SITE-BDX;site;Installé sur le site;;true
+located_in;AP-BDX-01;network;SITE-BDX;site;Installé sur le site;;true
+located_in;RTR-BEG-01;network;SITE-BEG;site;Installé sur le site;;true
+located_in;FW-BEG-01;network;SITE-BEG;site;Installé sur le site;;true
+located_in;SW-BEG-CORE-01;network;SITE-BEG;site;Installé sur le site;;true
+located_in;SW-BEG-BACKUP-01;network;SITE-BEG;site;Installé sur le site;;true
+located_in;LB-BEG-01;network;SITE-BEG;site;Installé sur le site;;true
+located_in;FW-MER-01;network;SITE-MER;site;Installé sur le site;;true
+located_in;SW-MER-01;network;SITE-MER;site;Installé sur le site;;true
+located_in;AP-MER-01;network;SITE-MER;site;Installé sur le site;;true
+located_in;FW-PES-01;network;SITE-PES;site;Installé sur le site;;true
+located_in;SW-PES-01;network;SITE-PES;site;Installé sur le site;;true
+located_in;AP-PES-01;network;SITE-PES;site;Installé sur le site;;true
+located_in;FW-LIB-01;network;SITE-LIB;site;Installé sur le site;;true
+located_in;SW-LIB-01;network;SITE-LIB;site;Installé sur le site;;true
+located_in;AP-LIB-01;network;SITE-LIB;site;Installé sur le site;;true
+located_in;FW-ARC-01;network;SITE-ARC;site;Installé sur le site;;true
+located_in;SW-ARC-01;network;SITE-ARC;site;Installé sur le site;;true
+located_in;AP-ARC-01;network;SITE-ARC;site;Installé sur le site;;true
+located_in;SRV-ERP-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-CRM-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-COMPTA-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-WEB-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-AUTH-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-MON-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-BACKUP-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-DB-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-DB-02;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-FILES-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-COLLAB-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-DEV-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-GIT-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-LOG-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-PBX-01;server;SITE-BEG;site;Hébergé sur le site;;true
+located_in;SRV-PRINT-01;server;SITE-BDX;site;Hébergé sur le site;;true
+located_in;SRV-RDS-01;server;SITE-BDX;site;Hébergé sur le site;;true
+located_in;SRV-MER-CACHE-01;server;SITE-MER;site;Hébergé sur le site;;true
+located_in;SRV-PES-CACHE-01;server;SITE-PES;site;Hébergé sur le site;;true
+located_in;SRV-LIB-CACHE-01;server;SITE-LIB;site;Hébergé sur le site;;true
+located_in;SRV-ARC-CACHE-01;server;SITE-ARC;site;Hébergé sur le site;;true
+communicates_with;RTR-BDX-01;network;FW-BDX-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-BDX-01;network;SW-BDX-CORE-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;SW-BDX-CORE-01;network;SW-BDX-VOIP-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;SW-BDX-CORE-01;network;AP-BDX-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;RTR-BEG-01;network;FW-BEG-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-BEG-01;network;SW-BEG-CORE-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-BEG-01;network;LB-BEG-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;SW-BEG-CORE-01;network;SW-BEG-BACKUP-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-MER-01;network;SW-MER-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;SW-MER-01;network;AP-MER-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-PES-01;network;SW-PES-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;SW-PES-01;network;AP-PES-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-LIB-01;network;SW-LIB-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;SW-LIB-01;network;AP-LIB-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-ARC-01;network;SW-ARC-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;SW-ARC-01;network;AP-ARC-01;network;Liaison réseau;"protocole=Ethernet;supervision=true";true
+communicates_with;FW-MER-01;network;FW-BEG-01;network;Tunnel intersite;"protocole=IPsec;chiffrement=true";true
+communicates_with;FW-PES-01;network;FW-BEG-01;network;Tunnel intersite;"protocole=IPsec;chiffrement=true";true
+communicates_with;FW-LIB-01;network;FW-BEG-01;network;Tunnel intersite;"protocole=IPsec;chiffrement=true";true
+communicates_with;FW-ARC-01;network;FW-BEG-01;network;Tunnel intersite;"protocole=IPsec;chiffrement=true";true
+communicates_with;FW-BDX-01;network;FW-BEG-01;network;Tunnel intersite;"protocole=IPsec;chiffrement=true";true
+hosted_on;APP-ERP;application;SRV-ERP-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-CRM;application;SRV-CRM-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-COMPTA;application;SRV-COMPTA-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-PORTAIL;application;SRV-WEB-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-INTRANET;application;SRV-COLLAB-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-HELPDESK;application;SRV-COLLAB-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-COLLAB;application;SRV-COLLAB-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-IAM;application;SRV-AUTH-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-MON;application;SRV-MON-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-GRAFANA;application;SRV-MON-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-BI;application;SRV-ERP-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-SCM;application;SRV-GIT-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-DOCS;application;SRV-COLLAB-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-LOG;application;SRV-LOG-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-BACKUP;application;SRV-BACKUP-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;APP-PBX;application;SRV-PBX-01;server;Instance principale;"protocole=https;port=443";true
+hosted_on;DB-ERP;database;SRV-DB-01;server;Instance de base de données;replication=true;true
+hosted_on;DB-CRM;database;SRV-DB-01;server;Instance de base de données;replication=true;true
+hosted_on;DB-COMPTA;database;SRV-DB-01;server;Instance de base de données;replication=true;true
+hosted_on;DB-GLPI;database;SRV-DB-02;server;Instance de base de données;replication=true;true
+hosted_on;DB-NEXTCLOUD;database;SRV-DB-02;server;Instance de base de données;replication=true;true
+hosted_on;DB-KEYCLOAK;database;SRV-DB-02;server;Instance de base de données;replication=true;true
+hosted_on;DB-GITLAB;database;SRV-DB-02;server;Instance de base de données;replication=true;true
+hosted_on;DB-METABASE;database;SRV-DB-02;server;Instance de base de données;replication=true;true
+installed_on;SOFT-NGINX;software;SRV-WEB-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-NGINX;software;SRV-AUTH-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-NGINX;software;SRV-COLLAB-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-NGINX;software;SRV-MER-CACHE-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-NGINX;software;SRV-PES-CACHE-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-NGINX;software;SRV-LIB-CACHE-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-NGINX;software;SRV-ARC-CACHE-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-APACHE;software;SRV-ERP-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-POSTGRESQL;software;SRV-DB-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-POSTGRESQL;software;SRV-DB-02;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-MARIADB;software;SRV-DB-02;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-DOCKER;software;SRV-WEB-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-DOCKER;software;SRV-COLLAB-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-DOCKER;software;SRV-MON-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-DOCKER;software;SRV-LOG-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-KEYCLOAK;software;SRV-AUTH-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-ZABBIX;software;SRV-MON-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-GRAFANA;software;SRV-MON-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-METABASE;software;SRV-ERP-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-GLPI;software;SRV-COLLAB-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-NEXTCLOUD;software;SRV-COLLAB-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-GITLAB;software;SRV-GIT-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-OPENSEARCH;software;SRV-LOG-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-RESTIC;software;SRV-BACKUP-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+installed_on;SOFT-ASTERISK;software;SRV-PBX-01;server;Installation active;"gestion=paquets;mise_a_jour=planifiee";true
+uses;APP-ERP;application;DB-ERP;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-CRM;application;DB-CRM;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-COMPTA;application;DB-COMPTA;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-HELPDESK;application;DB-GLPI;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-COLLAB;application;DB-NEXTCLOUD;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-INTRANET;application;DB-NEXTCLOUD;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-IAM;application;DB-KEYCLOAK;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-SCM;application;DB-GITLAB;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+uses;APP-BI;application;DB-METABASE;database;Accès applicatif;"protocole=TCP;chiffrement=true";true
+stores;DB-ERP;database;DATA-FACTURES;data;Stockage principal;chiffrement=true;true
+stores;DB-ERP;database;DATA-CONTRATS;data;Stockage principal;chiffrement=true;true
+stores;DB-CRM;database;DATA-CLIENTS;data;Stockage principal;chiffrement=true;true
+stores;DB-COMPTA;database;DATA-FACTURES;data;Stockage principal;chiffrement=true;true
+stores;DB-GLPI;database;DATA-TICKETS;data;Stockage principal;chiffrement=true;true
+stores;DB-NEXTCLOUD;database;DATA-DOCUMENTS;data;Stockage principal;chiffrement=true;true
+stores;DB-KEYCLOAK;database;DATA-RH;data;Stockage principal;chiffrement=true;true
+stores;DB-GITLAB;database;DATA-DOCUMENTS;data;Stockage principal;chiffrement=true;true
+stores;DB-METABASE;database;DATA-CLIENTS;data;Stockage principal;chiffrement=true;true
+depends_on;APP-PORTAIL;application;SOFT-NGINX;software;Composant logiciel;dependance=requise;true
+depends_on;APP-INTRANET;application;SOFT-NEXTCLOUD;software;Composant logiciel;dependance=requise;true
+depends_on;APP-HELPDESK;application;SOFT-GLPI;software;Composant logiciel;dependance=requise;true
+depends_on;APP-COLLAB;application;SOFT-NEXTCLOUD;software;Composant logiciel;dependance=requise;true
+depends_on;APP-IAM;application;SOFT-KEYCLOAK;software;Composant logiciel;dependance=requise;true
+depends_on;APP-MON;application;SOFT-ZABBIX;software;Composant logiciel;dependance=requise;true
+depends_on;APP-GRAFANA;application;SOFT-GRAFANA;software;Composant logiciel;dependance=requise;true
+depends_on;APP-BI;application;SOFT-METABASE;software;Composant logiciel;dependance=requise;true
+depends_on;APP-SCM;application;SOFT-GITLAB;software;Composant logiciel;dependance=requise;true
+depends_on;APP-LOG;application;SOFT-OPENSEARCH;software;Composant logiciel;dependance=requise;true
+depends_on;APP-BACKUP;application;SOFT-RESTIC;software;Composant logiciel;dependance=requise;true
+depends_on;APP-PBX;application;SOFT-ASTERISK;software;Composant logiciel;dependance=requise;true
+depends_on;APP-ERP;application;SOFT-APACHE;software;Composant logiciel;dependance=requise;true
+depends_on;APP-CRM;application;SOFT-APACHE;software;Composant logiciel;dependance=requise;true
+depends_on;APP-COMPTA;application;SOFT-APACHE;software;Composant logiciel;dependance=requise;true
+communicates_with;APP-PORTAIL;application;APP-IAM;application;Authentification;"protocole=HTTPS;port=443";true
+communicates_with;APP-PORTAIL;application;APP-CRM;application;Consultation client;"protocole=HTTPS;port=443";true
+communicates_with;APP-CRM;application;APP-ERP;application;Synchronisation des commandes;"protocole=HTTPS;port=443";true
+communicates_with;APP-ERP;application;APP-COMPTA;application;Transfert des écritures;"protocole=HTTPS;port=443";true
+communicates_with;APP-HELPDESK;application;APP-IAM;application;Authentification;"protocole=HTTPS;port=443";true
+communicates_with;APP-COLLAB;application;APP-IAM;application;Authentification;"protocole=HTTPS;port=443";true
+communicates_with;APP-BI;application;APP-ERP;application;Extraction de données;"protocole=HTTPS;port=443";true
+communicates_with;APP-BI;application;APP-CRM;application;Extraction de données;"protocole=HTTPS;port=443";true
+communicates_with;APP-GRAFANA;application;APP-MON;application;Lecture des métriques;"protocole=HTTPS;port=443";true
+communicates_with;APP-LOG;application;APP-IAM;application;Collecte des événements;"protocole=HTTPS;port=443";true
+uses;PROC-VENTE;process;APP-CRM;application;Application support du processus;importance=majeure;true
+supports;APP-CRM;application;PROC-VENTE;process;Soutient le processus;couverture=principale;true
+uses;PROC-VENTE;process;APP-ERP;application;Application support du processus;importance=majeure;true
+supports;APP-ERP;application;PROC-VENTE;process;Soutient le processus;couverture=principale;true
+uses;PROC-FACTURATION;process;APP-ERP;application;Application support du processus;importance=majeure;true
+supports;APP-ERP;application;PROC-FACTURATION;process;Soutient le processus;couverture=principale;true
+uses;PROC-FACTURATION;process;APP-COMPTA;application;Application support du processus;importance=majeure;true
+supports;APP-COMPTA;application;PROC-FACTURATION;process;Soutient le processus;couverture=principale;true
+uses;PROC-SUPPORT;process;APP-HELPDESK;application;Application support du processus;importance=majeure;true
+supports;APP-HELPDESK;application;PROC-SUPPORT;process;Soutient le processus;couverture=principale;true
+uses;PROC-SUPPORT;process;APP-MON;application;Application support du processus;importance=majeure;true
+supports;APP-MON;application;PROC-SUPPORT;process;Soutient le processus;couverture=principale;true
+uses;PROC-COLLAB;process;APP-COLLAB;application;Application support du processus;importance=majeure;true
+supports;APP-COLLAB;application;PROC-COLLAB;process;Soutient le processus;couverture=principale;true
+uses;PROC-COLLAB;process;APP-INTRANET;application;Application support du processus;importance=majeure;true
+supports;APP-INTRANET;application;PROC-COLLAB;process;Soutient le processus;couverture=principale;true
+uses;PROC-PILOTAGE;process;APP-BI;application;Application support du processus;importance=majeure;true
+supports;APP-BI;application;PROC-PILOTAGE;process;Soutient le processus;couverture=principale;true
+uses;PROC-PILOTAGE;process;APP-GRAFANA;application;Application support du processus;importance=majeure;true
+supports;APP-GRAFANA;application;PROC-PILOTAGE;process;Soutient le processus;couverture=principale;true
+depends_on;APP-ERP;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-CRM;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-COMPTA;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-PORTAIL;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-INTRANET;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-HELPDESK;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-COLLAB;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-IAM;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-SCM;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+depends_on;APP-BI;application;APP-BACKUP;application;Protection par sauvegarde;frequence=quotidienne;true
+communicates_with;APP-ERP;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;APP-CRM;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;APP-COMPTA;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;APP-PORTAIL;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;APP-IAM;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;APP-HELPDESK;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;APP-COLLAB;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;APP-SCM;application;APP-LOG;application;Envoi des journaux;"protocole=Syslog;chiffrement=true";true
+communicates_with;SRV-ERP-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-CRM-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-COMPTA-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-WEB-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-AUTH-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-MON-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-BACKUP-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-DB-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-DB-02;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-FILES-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-COLLAB-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-DEV-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-GIT-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-LOG-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-PBX-01;server;SW-BEG-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-PRINT-01;server;SW-BDX-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-RDS-01;server;SW-BDX-CORE-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-MER-CACHE-01;server;SW-MER-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-PES-CACHE-01;server;SW-PES-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-LIB-CACHE-01;server;SW-LIB-01;network;Raccordement réseau;protocole=Ethernet;true
+communicates_with;SRV-ARC-CACHE-01;server;SW-ARC-01;network;Raccordement réseau;protocole=Ethernet;true
+stores;APP-BACKUP;application;DATA-BACKUPS;data;Produit les jeux de sauvegarde;chiffrement=true;true
+stores;APP-LOG;application;DATA-LOGS;data;Centralise les journaux;indexation=OpenSearch;true
