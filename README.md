@@ -162,7 +162,7 @@ Avant de proposer une modification, consultez [`CONTRIBUTING.md`](CONTRIBUTING.m
 
 Atlas SI est développé et maintenu sur du temps personnel. Si le projet vous est utile, vous pouvez soutenir son développement, sa documentation et son infrastructure par une contribution volontaire :
 
-**[Soutenir Atlas SI avec PayPal](https://www.paypal.me/VOTRE_IDENTIFIANT)**
+**[Soutenir Atlas SI avec PayPal](paypal.me/oliviertocanier)**
 
 Les contributions sont facultatives, sans contrepartie contractuelle et n’ouvrent pas droit à un avantage fiscal.
 
