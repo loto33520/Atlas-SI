@@ -9,7 +9,9 @@ L’objectif est de fournir aux DSI, RSSI, architectes et responsables technique
 > **Version actuelle : 2.2.0**  
 > **Statut : version communautaire**
 
-<!-- Ajoutez ici une capture principale : docs/images/atlas-si-cartographie.png -->
+## Aperçu
+
+![Vue générale de la cartographie Atlas SI](docs/images/atlas-si-cartographie.png)
 
 ## Points forts
 
