@@ -1,0 +1,3 @@
+external_id;type_code;name;description;status;criticality;owner_name;tags;attributes;active
+APP-ERP;application;ERP;Gestion commerciale et facturation;active;critical;DSI;"environnement=production;domaine=finance";"version=8.4;sauvegarde=true";true
+SRV-ERP;server;VM-ERP-01;Serveur applicatif ERP;active;high;Infrastructure;"environnement=production;site=siege";"os=Linux;supervision=Zabbix";true

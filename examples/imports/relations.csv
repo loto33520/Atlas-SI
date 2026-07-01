@@ -1,0 +1,2 @@
+relation_type_code;source_ref;source_type_code;target_ref;target_type_code;label;attributes;active
+hosted_on;APP-ERP;application;SRV-ERP;server;Production;"port=443;protocole=https";true

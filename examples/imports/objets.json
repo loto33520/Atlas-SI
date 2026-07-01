@@ -1,0 +1,16 @@
+[
+  {
+    "external_id": "APP-CRM",
+    "type_code": "application",
+    "name": "CRM",
+    "criticality": "high",
+    "tags": {
+      "environnement": "production",
+      "domaine": "commercial"
+    },
+    "attributes": {
+      "version": "5.2",
+      "sauvegarde": true
+    }
+  }
+]
