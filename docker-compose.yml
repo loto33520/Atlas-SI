@@ -1,0 +1,97 @@
+name: atlas-si
+
+services:
+  postgres:
+    image: ${POSTGRES_IMAGE:-postgres:18.4-alpine3.23}
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - atlas_postgres_data:${POSTGRES_DATA_PATH:-/var/lib/postgresql}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - atlas_backend
+    security_opt:
+      - no-new-privileges:true
+
+  api:
+    image: atlas-si-api:2.2.0
+    build:
+      context: ./backend
+      args:
+        PYTHON_IMAGE: ${PYTHON_IMAGE:-python:3.13.14-slim-trixie}
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      APP_VERSION: "2.2.0"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health/live', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      atlas_backend:
+      atlas_frontend:
+        gw_priority: 1
+    security_opt:
+      - no-new-privileges:true
+
+  gateway:
+    build:
+      context: .
+      dockerfile: deploy/nginx/Dockerfile
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-node:24.18.0-alpine3.23}
+        NGINX_IMAGE: ${NGINX_IMAGE:-nginx:1.30.3-alpine3.23}
+        VITE_MAP_WHEEL_SENSITIVITY: ${MAP_WHEEL_SENSITIVITY:-0.85}
+        VITE_MAP_MIN_ZOOM: ${MAP_MIN_ZOOM:-0.12}
+        VITE_MAP_MAX_ZOOM: ${MAP_MAX_ZOOM:-4.8}
+        VITE_MAP_DEFAULT_THEME: ${MAP_DEFAULT_THEME:-light}
+    environment:
+      PUBLIC_HOST: ${PUBLIC_HOST:-carto.example.org}
+      GATEWAY_SCHEME: ${GATEWAY_SCHEME:-https}
+      GATEWAY_PORT: ${GATEWAY_PORT:-443}
+      TLS_CERTIFICATE_FILE: ${TLS_CERTIFICATE_FILE:-atlas-si.fullchain.pem}
+      TLS_PRIVATE_KEY_FILE: ${TLS_PRIVATE_KEY_FILE:-atlas-si.key}
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${GATEWAY_PORT:-443}:${GATEWAY_PORT:-443}"
+    volumes:
+      - ./certs:/etc/nginx/certs:ro
+    networks:
+      - atlas_frontend
+    read_only: true
+    tmpfs:
+      - /etc/nginx/conf.d
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  atlas_postgres_data:
+    name: ${POSTGRES_VOLUME_NAME:-atlas_postgres_data}
+
+networks:
+  atlas_backend:
+    name: atlas_backend
+    internal: true
+  atlas_frontend:
+    name: atlas_frontend
