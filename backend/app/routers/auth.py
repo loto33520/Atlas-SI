@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 import secrets
 from datetime import timedelta
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlsplit
 
 import httpx
 from authlib.integrations.starlette_client import OAuth, OAuthError
@@ -46,8 +46,22 @@ if settings.auth_mode == "keycloak":
     )
 
 
+_ALLOWED_NEXT_PATHS = {
+    "/",
+    "/app",
+    "/dashboard",
+}
+
+
 def _safe_next_path(value: str | None) -> str:
-    if value and value.startswith("/") and not value.startswith("//"):
+    if not value:
+        return "/"
+    if not value.startswith("/") or value.startswith("//"):
+        return "/"
+    parsed = urlsplit(value)
+    if parsed.scheme or parsed.netloc:
+        return "/"
+    if parsed.path in _ALLOWED_NEXT_PATHS:
         return value
     return "/"
 
