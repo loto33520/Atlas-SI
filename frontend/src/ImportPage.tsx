@@ -43,6 +43,10 @@ function statusLabel(value: string): string {
   return ({ preview: 'Aperçu', applied: 'Appliqué', rolled_back: 'Annulé', failed: 'Échec' } as Record<string, string>)[value] ?? value
 }
 
+function toEntityKind(value: string): EntityKind {
+  return value === 'relations' ? 'relations' : 'objects'
+}
+
 export default function ImportPage() {
   const [entityKind, setEntityKind] = useState<EntityKind>('objects')
   const [sourceFormat, setSourceFormat] = useState<SourceFormat>('csv')
@@ -182,12 +186,14 @@ export default function ImportPage() {
     setNotice(null)
   }
 
+  const safeEntityKind = toEntityKind(entityKind)
+
   return (
     <>
       <header className="page-header">
         <div><p className="eyebrow">Lot 3</p><h1>Imports CSV et JSON</h1><p>Prévisualise, contrôle les doublons, applique puis annule un import si nécessaire.</p></div>
         <div className="header-actions">
-          <a className="button secondary" href={`/api/imports/template/${entityKind}`}>Télécharger le modèle CSV</a>
+          <a className="button secondary" href={`/api/imports/template/${safeEntityKind}`}>Télécharger le modèle CSV</a>
         </div>
       </header>
 
@@ -198,7 +204,7 @@ export default function ImportPage() {
           <div className="import-steps"><span className={content ? 'done' : 'active'}>1. Fichier</span><span className={analyse ? 'done' : content ? 'active' : ''}>2. Colonnes</span><span className={job ? 'done' : analyse ? 'active' : ''}>3. Aperçu</span><span className={job?.status === 'applied' ? 'done' : job ? 'active' : ''}>4. Application</span></div>
 
           <div className="form-row">
-            <label>Contenu à importer<select value={entityKind} onChange={(event) => { setEntityKind(event.target.value as EntityKind); resetFile() }}><option value="objects">Objets du SI</option><option value="relations">Relations</option></select></label>
+            <label>Contenu à importer<select value={entityKind} onChange={(event) => { setEntityKind(toEntityKind(event.target.value)); resetFile() }}><option value="objects">Objets du SI</option><option value="relations">Relations</option></select></label>
             <label>Gestion des doublons<select value={duplicateMode} onChange={(event) => setDuplicateMode(event.target.value as DuplicateMode)}><option value="skip">Ignorer les existants</option><option value="update">Mettre à jour les existants</option><option value="error">Bloquer sur les doublons</option></select></label>
           </div>
 
