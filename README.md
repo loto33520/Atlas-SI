@@ -176,16 +176,6 @@ Ne publiez jamais :
 
 Pour signaler une vulnérabilité, consultez [`SECURITY.md`](SECURITY.md).
 
-## Feuille de route envisagée
-
-- connecteurs GLPI, NetBox, VMware, Proxmox, Active Directory et Entra ID ;
-- synchronisation et contrôle renforcé de l’actualisation des données ;
-- tableaux de bord de gouvernance supplémentaires ;
-- amélioration continue des exports et des modèles de cartographie ;
-- enrichissement des fonctions liées à la sécurité et à la conformité.
-
-Les propositions et contributions sont les bienvenues dans les tickets GitHub.
-
 ## Contribuer
 
 Les corrections, améliorations, traductions, modèles et contributions documentaires sont les bienvenus.
